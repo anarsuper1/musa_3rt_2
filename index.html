@@ -61,38 +61,6 @@
     <div id="questions"></div>
 
     <script>
-        const asan = [
-    'Опишите преимущества и ограничения облачных вычислений',
-    'Объясните различия между локальными вычислениями и облачными вычислениями',
-    'Объясните модель общей ответственности для контейнерных сервисов',
-    'Объясните модель общей ответственности для абстрактных сервисов',
-    'Объясните основную концепцию модели совместной ответственности модель общей ответственности AWS',
-    'Объясните возможные киберугрозы (cyber threats) в облаке',
-    'Объясните типы фреймворков облачной безопасности (Cloud Security Frameworks)',
-    'Объясните различия между Федеральной программой управления рисками и авторизациями (FedRAMP Federal Risk and Authorization Management Program) и Федеральным законом о модернизации информационной безопасности (FISMA Federal Information Security Modernization Act).',
-    'Каковы стандарты проектирования дата-центров(data center design)? ',
-    'Как AWS управляет своими дата-центрами? Объясните слой периметра (Perimeter layer)',
-    'Объясните значение IAM пользователей и IAM политик (IAM users and IAM policies)',
-    'Объясните значение IAM групп и IAM ролей (IAM groups and IAM roles).',
-    'Объясните, что такое AWS Direct Connect и типы подключений с помощью AWS Direct Connect',
-    'Объясните, что такое подсеть(subnet) в AWS и ее типы',
-    'Объясните, что такое Amazon Firewall Manager и его преимущества',
-    'Объясните, что такое сетевой брандмауэр (Amazon Netwrok Firewall) Amazon и модели его развертывания',
-    'Объясните лучшие практики безопасности облачных данных',
-    'Объясните проблемы защиты данных в облаке',
-    'Объясните услугу Amazon GuardDuty',
-    'Объясните сервис Amazon Config',
-    'Объясните домены инцидентов безопасности облака в Amazon Web Services (AWS)',
-    'Объясните принципы реагирования на инциденты AWS и цели проектирования',
-    'Объясните, что такое управление безопасностью облака (Cloud security posture management) и как выбрать лучший инструмент CSPM ',
-    'Объясните, как работает система управления безопасностью в облаке (Cloud security posture management) и ее основные особенности',
-    'Объясните, что такое Cloud bursting',
-    'Объясните архитектуру объединения ресурсов (Resource Pooling Architecture) в облачных вычислениях ',
-    'Объясните основные преимущества оценки безопасности облака',
-    'Объясните процесс оценки безопасности облака',
-    'Напишите пример контрольного списка оценки безопасности (security assessment checklist) в облаке',
-    'Объясните, что такое AWS Security Hub и каковы его идеи',
-];
         const orta = [
     'Объясните модели развертывания облака: публичное и гибридное',
     'Объясните модели развертывания облака: частное и облако сообщества',
@@ -125,45 +93,21 @@
     'Объясните сводную панель (summary dashboard) инструментов в Security Hub (виджеты) ',
     'Объясните Amazon EventBridge'
 ];
-        const cetin = [
-    'Сравните три различных типа услуг (моделей услуг)',
-    'За безопасность каких частей в облаке отвечает AWS? Объясните эти элементы',
-    'Сравните степень риска для резервного копирования (backups), балансировки нагрузки (load balancing), планирования емкости (capacity planning), владения (ownership), коммерческих соглашений (commercial agreements) и мониторинга в традиционной ИТ-инфраструктуре и облачной инфраструктуре',
-    'Уточнить процесс выбора подходящих фреймворков облачной безопасности (appropriate Cloud Security Frameworks)',
-    'Как AWS управляет своими дата-центрами? Объясните слой окружающей среды (environmental layer)',
-    'Как искусственный интеллект (AI) может улучшить многофакторную аутентификацию (MFA)?  ',
-    'Объясните список контроля доступа к сети (Network Access Control List) в AWS ',
-    'Объясните лучшие практики обеспечения безопасности инфраструктуры в облачных вычислениях',
-    'Объясните Amazon Macie (основные характеристики, преимущества, варианты использования)',
-    'Объясните лучшие практики мониторинга в Amazon Web Services (AWS)',
-    'Объясните основные отличия реагирования на инциденты в Amazon Web Services (AWS)',
-    'Объясните брокер безопасности облачного доступа (Cloud Access Security Broker) и его четыре столпа (pillars)',
-    'Объясните основные различия между AWS WAF (брандмауэр веб-приложений) и AWS Shield',
-    'Объясните важные аспекты, которые следует включить в оценку безопасности облака',
-    'Объясните Amazon Cognito'
-];
 
         function randomQuestion(text) {
             return text[Math.floor(Math.random() * text.length)];
         }
 
         function generateQuestions() {
-            const question_asan1 = randomQuestion(asan);
-            const question_asan2 = randomQuestion(asan);
-            const question_asan3 = randomQuestion(asan);
             const question_orta1 = randomQuestion(orta);
             const question_orta2 = randomQuestion(orta);
             const question_orta3 = randomQuestion(orta);
-            const question_cetin = randomQuestion(cetin);
 
             const selectedQuestions = [
-                '5 баллов: ' + question_asan1,
-                '5 баллов: ' + question_asan2,
-                '5 баллов: ' + question_asan3,
+
                 '10 баллов: ' + question_orta1,
                 '10 баллов: ' + question_orta2,
                 '10 баллов: ' + question_orta3,
-                '20 баллов: ' + question_cetin
             ];
 
             const questionsDiv = document.getElementById('questions');
